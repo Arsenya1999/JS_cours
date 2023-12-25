@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=for_output, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="for_output"></p>
+    <input type="text" name="" id="name" />
+    <button onclick="show_alert()">Поздароваться</button>
+    <script>
+    "use strict";
+let for_output = document.getElementById("for_output");
+let name = document.getElementById("name");
+
+let user = "АРсюха";
+let age = 16;
+let message = "ПРиветули!";
+
+let user_alt = "Артур",
+  age_alt = 16,
+  message_alt = "Уходите отсюда!";
+
+// Варианты вывода
+// 1 Вариант
+for_output.innerHTML = `Пользователь: ${user}
+                            <br>Возраст: ${age}
+                            <br>Сообщение: ${message}`;
+// 2 Вариант
+console.log(`Пользователь: ${user}\nВозраст: ${age}\nСообщение: ${message}`);
+// 3 Вариант
+alert(`Пользователь: ${user}\nВозраст: ${age}\nСообщение: ${message}`);
+const show_alert = () => {
+  alert(`Привет, ${name.value}`);
+};
+</script>
+</body>
+</html>
