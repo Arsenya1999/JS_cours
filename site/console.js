@@ -41,7 +41,7 @@ function calculator(a, c, b) {
 
     }
 }
-console.log(calculator(5, "%", 3));
+console.log(calculator(5, "+", 3));
  
 function year(a){
     // a=Number

@@ -1,42 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>календарь</title>
 </head>
 <body>
     <script>
-       
-    let a = prompt(`Введите день`,"35");
 
-    if ( a>=0 && a <= 31    ) {
-       alert ('январь');
-    } else if(a>31 && a<=59){
-       alert ('Феврвль');
-    } else if(a>59 && a<=90){
-       alert ('Март');
-    }else if(a>90 && a<=120){
-       alert('Апрель');
-    }else if(a>120 && a<=151){
-       alert ('Май');
-    }else if(a>151 && a<=181){
-        alert ('Июнь');
-    }else if(a>181 && a<=212){
-        alert ('Июль');
-    }else if(a>212 && a<=243){
-        alert ('Август');
-    }else if(a>243 && a<=273){
-        alert ('Сентябрь');
-    }else if(a>273 && a<=304){
-        alert ('Октябрь');
-    }else if(a>304 && a<=334){
-        alert ('Ноябрь');
-    }else if(a>334 && a<=365){
-        alert ('Декабрь');
-    }else {
-        
-}
+        let a = prompt(`Введите день`,'');
+
+        function day (a) {
+            
+
+            if ( a>=0 && a <= 31) {
+                reslt = 'январь';
+            } else if (a>31 && a<=59) {
+                reslt = 'Феврвль';
+            } else if (a>59 && a<=90) {
+                reslt =  'Март';
+            } else if (a>90 && a<=120) {
+                reslt = 'Апрель';
+            } else if (a>120 && a<=151) {
+                reslt =  'Май';
+            } else if (a>151 && a<=181) {
+                reslt =  'Июнь';
+            } else if (a>181 && a<=212) {
+                reslt =  'Июль';
+            } else if (a>212 && a<=243) {
+                reslt =  'Август';
+            } else if (a>243 && a<=273) {
+                reslt =  'Сентябрь';
+            } else if (a>273 && a<=304) {
+                reslt =  'Октябрь';
+            } else if (a>304 && a<=334) {
+                reslt =  'Ноябрь';
+            } else if (a>334 && a<=365) {
+                reslt =  'Декабрь';
+            } 
+
+            if (a>7) { 
+                
+                a=a%7
+
+            }
+
+            switch(a) {
+                case 7 :
+                    reslt = reslt + ' Воскресенье';
+                    break;
+                    
+                case 6 :
+                    reslt = reslt + ' Суббота';
+                    break;
+                case 5 :
+                    reslt = reslt + ' Пятница';
+                    break;
+                case 4 :
+                    reslt = reslt + ' Четверг' ;
+                    break;
+                case 3 :
+                    reslt = reslt + ' Среда';
+                    break;
+                case 2 :
+                    reslt = reslt + ' Вторник';
+                    break;
+                case 1 :
+                    reslt = reslt + ' Понедельник';
+                    break;
+            }
+
+            reslt = 'Этот день, это ' + reslt
+            return reslt  
+
+        }
+
+        c = Number(a)
+
+        reslt = day(c)
+        alert(reslt)
+        // alert (typeof(c))    
+    
+
 </script>
 </body>
 </html>
